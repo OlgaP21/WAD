@@ -1,0 +1,82 @@
+/* Lots of class selectors */
+.wrapper{
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+}
+div article{  /* Descendant  selector*/
+    color:red
+}
+
+aside:hover {  /* Pseudoclass*/
+    color: brown;
+}
+
+.wrapper > * { /* Child selector */
+    padding: 10px;
+    margin: 10px;
+    flex: 1 100%;
+    border-radius: 10px;
+}
+
+
+aside.Roosa ~ aside {/* General sibling selector */
+    background: green;
+}
+
+aside.Kuldne + aside { /* Adjacent sibling selector */
+    background:red;
+}
+
+.header {
+    background: cornflowerblue;
+    height: 60px;
+    display: flex;
+    margin: auto;
+}
+
+.header img{
+    height: 60px;
+    margin:auto;
+    position: relative;
+}
+
+#footer { /* ID selector */
+    background: darkgray;
+    height: 80px;
+}
+
+.main{
+    text-align: left;
+    background: lightgreen;
+    height: 300px;
+    font-size: 1.5rem;
+    overflow: hidden;
+    margin-top: 50px;
+}
+
+.Kuldne{
+    background: gold;
+}
+
+.Roosa{
+    background:hotpink;
+}
+
+.Punane{
+    background:red;
+}
+
+
+.otsing{
+    display: flex;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+form button{
+    padding: none;
+    color: red;
+    border-left: none;
+    cursor: pointer;
+}
