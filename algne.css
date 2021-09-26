@@ -1,5 +1,5 @@
 /* Lots of class selectors */
-
+@media only screen and (min-width: 600px){
 * {
 	font-family: Georgia;
 	font-size: 18px;
@@ -75,4 +75,5 @@ div p { /*Descendant selector*/
 	width: 44px;
 	height: 38px;
 	align-self: flex-start;
+}
 }
