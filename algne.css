@@ -1,96 +1,78 @@
 /* Lots of class selectors */
-.wrapper{
+
+* {
+	font-family: Georgia;
+	font-size: 18px;
+}
+
+body {
+	background-image: linear-gradient(90deg, cornflowerblue 0px, cornflowerblue 470px, white 470px, white 1045px, cornflowerblue 1045px, cornflowerblue 1500px);
+}
+
+header {
     display: flex;
-    flex-flow: row wrap;
-    text-align: center;
-}
-div article{  /* Descendant  selector*/
-    color:red
+	justify-content: space-between;
+	align-items: flex-start;
 }
 
-aside:hover {  /* Pseudoclass*/
-    color: brown;
+input {
+	width: 400px;
+	height: 20px;
 }
 
-.wrapper > * { /* Child selector */
-    padding: 10px;
-    margin: 10px;
-    flex: 1 100%;
-    border-radius: 10px;
+input:hover { /*Pseudo-class*/
+	box-shadow: 0px 1px;
 }
 
-
-aside.Roosa ~ aside {/* General sibling selector */
-    background: green;
+#search { /*id selector*/
+	cursor: pointer;
+	color: white;
+	background-color: blue;
 }
 
-aside.Kuldne + aside { /* Adjacent sibling selector */
-    background:red;
+#search:active { /*id selector*/
+	color: blue;
+	background-color: white;
 }
 
-.header {
-    background: cornflowerblue;
-    height: 60px;
-    display: flex;
-    margin: auto;
+.small { /*class selector*/
+	height: 30px;
+	width: 30px;
 }
 
-.header img{
-    height: 60px;
-    margin:auto;
-    position: relative;
+.big { /*class selector*/
+	height: 300px;
+	width: 450px;
 }
 
-#footer { /* ID selector */
-    background: darkgray;
-    height: 80px;
+p > img { /*Child selector*/
+	height: 30px;
+	width: 30px;
 }
 
-.main{
-    text-align: left;
-    background: lightgreen;
-    height: 300px;
-    font-size: 1.5rem;
-    overflow: hidden;
-    margin-top: 50px;
+body section { /*Descendant selector*/
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	box-shadow: 0px 0px 5px grey;
+	margin: 15px auto;
+	width: 30%;
 }
 
-.Kuldne{
-    background: gold;
+div p { /*Descendant selector*/
+	display: flex;
+	justify-content: space-between;
 }
 
-.Roosa{
-    background:hotpink;
+.grey { /*Class selector*/
+	color: grey;
 }
 
-.Punane{
-    background:red;
-}
-
-
-.otsing{
-    display: flex;
-    padding: 10px;
-    box-sizing: border-box;
-}
-
-form button{
-    padding: none;
-    color: red;
-    border-left: none;
-    cursor: pointer;
-}
-.taust {
-    border: 10px blue;
-    padding: 150px;
-    background-color: deepskyblue;
-
-}
-.valgekast {
-    margin: auto;
-    border: 15px;
-    background-color: white;
-    width: 300px;
-    padding: 10px;
-    
+.like { /*Class selector*/
+	background: url("like.png");
+	cursor: pointer;
+	border-radius: 5px;
+	width: 44px;
+	height: 38px;
+	align-self: flex-start;
 }
