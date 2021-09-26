@@ -80,3 +80,17 @@ form button{
     border-left: none;
     cursor: pointer;
 }
+.taust {
+    border: 10px blue;
+    padding: 150px;
+    background-color: deepskyblue;
+
+}
+.valgekast {
+    margin: auto;
+    border: 15px;
+    background-color: white;
+    width: 300px;
+    padding: 10px;
+    
+}
