@@ -8,41 +8,20 @@
     <title>Homework1 Login</title>
 </head>
 <body>
-    <div class="taust">
-    <form action="index.html" method="POST" class="valgekast">
-        <div class="imgcontainer">
-            <img src="logo.png" alt="logo" class="avatar" width="75" height="75">
-        </div>
-        <div>
-            <font size="+2"><center>Welcome to postIt!</center> 
-            <center><a href="logo.png">Create an Account</a></center>
-            <center>Or</center>
-            <center>Please Log In</center></font> 
-        </div>
-        <div class="container">
-            <font size="+3">
-            <center>
+    <section>
+        <div>Welcome to postIt!</div>
+        <p>Create an account</p>
+		<p>Or</p>
+        <form action="index.html" method="POST" class="valgekast">
+        <div>Please Log In</div>
             <input type="text" placeholder="Email" name="Email" id="">
             <input type="text" placeholder="Password" name="password" id="">
-            </center>
-            </font>
-        </div>
+        </form>
         <div>
-            <center>
-            <font size="+2">
-                <a href="index.html"><button style="color: white; background-color: blue;">Log In</button></a>
-            </font>
-            </center>
+            <a href="index.html"><button id="login">Log In</button></a>
         </div> 
         <div>
-            <center>
-                <a href="logo.png">Forgot Password</a>
-            </center>
+                <a href="logo.png" class="link">Forgot Password</a>
         </div>
-    </form>
-</div>
-
-
-
-
+    </section>
 </body>
