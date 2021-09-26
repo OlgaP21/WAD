@@ -1,0 +1,53 @@
+* {
+	font-family: Georgia;
+	font-size: 18px;
+}
+
+body {
+	position: relative;
+	top: 170px;
+	background-color: cornflowerblue;
+}
+
+section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: auto;
+	padding: 50px 20px 20px;
+	width: 20%;
+	background-image: url("logoCopy.png");
+	background-repeat: no-repeat;
+	background-color: white;
+	background-position: left-top;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#login { /*id selector*/
+	cursor: pointer;
+	color: white;
+	background-color: blue;
+}
+
+#login:active { /*id selector, pseudo-class*/
+	color: blue;
+	background-color: white;
+}
+
+div + p { /* Adjacent sibling selector*/
+	text-decoration: underline;
+	color: blue;
+}
+
+div ~ input { /*General sibling selector*/
+	margin: 3px;
+}
+
+.link:visited { /*Pseudo-class*/
+	color: blue;
+}
