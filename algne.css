@@ -38,13 +38,13 @@ input:hover { /*Pseudo-class*/
 }
 
 .small { /*class selector*/
-	height: 30px;
-	width: 30px;
+	height: auto;
+	width: 5%;
 }
 
 .big { /*class selector*/
-	height: 300px;
-	width: 450px;
+	height: auto;
+	width: 100%;
 }
 
 p > img { /*Child selector*/
