@@ -49,7 +49,9 @@ $.get("https://jsonkeeper.com/b/VST9", function(json_objects) {
 //to run web server open cmd in project directory
 //type a command: python -m http.server (for python version 3) or 
 //                python -m SimpleHTTPServer (for python version 2)
-//open index.html
+//output will be something like: "Serving HTTP on :: port 8000 (http://[::]:8000/)"
+//open browser and type "localhost:" and number of port
+//for example in this case: "localhost:8000"
 $.get("hw2.json", function(json_objects) {
     for (object of json_objects) {
         let section = $('<section>');
