@@ -11,9 +11,6 @@
 <script>
 export default {
     name: "contactCompo",
-    data: function(){
-        return{}
-    },
     computed:{
         contactsList(){
             return this.$store.state.contactsList
