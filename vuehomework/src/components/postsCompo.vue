@@ -5,7 +5,7 @@
             <p class="grey"><img src="../assets/face.png" alt="face">{{post.creationTime}}</p>
 			<img src="../assets/image1.jpg" alt="portal" class="big">
 			<p>{{post.bodyOfPost}}</p>
-			<button class="like"></button>
+            <button v-on:click="PlusLike">{{post.numberOfLikes}}</button>
 		</div>
 	</section>
     </body>
@@ -14,6 +14,11 @@
 <script>
 export default {
     name: "postsCompo",
+    methods: {
+        PlusLike: function() {
+            this.$store.commit("PlusLike")
+        },
+    },
     computed:{
         postsList(){
             return this.$store.state.postsList

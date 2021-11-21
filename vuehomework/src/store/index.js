@@ -3,8 +3,8 @@ import { createStore } from "vuex";
 export default createStore({
   state: {
     contactsList:[
-      {id: 1, name: "jfjfj", email: "kjdj", telephone: "232123"},
-      {id: 2, name: "gjkdi", email: "kfja", telephone: "346926"}
+      {id: 1, name: "Name1", email: "Email1", telephone: "56247312"},
+      {id: 2, name: "Name2", email: "Email2", telephone: "53697201"}
   ],
     postsList:[
         {
@@ -14,9 +14,10 @@ export default createStore({
             "authorEmail":  "John.Smith@example.com",
             "bodyOfPost": "I think it is going to rain",
             "pathToFacePicture": "@assets/face.png",
-            "pathToBodyPicture": "../assets/image1.jpg",
+            "pathToBodyPicture": "@assets/image1.jpg",
             "classOfPicture": "big",
-            "classOfButton": "like"
+            "classOfButton": "like",
+            "numberOfLikes": 10
         },
         {
             "id": 2,
@@ -27,7 +28,8 @@ export default createStore({
             "pathToFacePicture": "../assets/face.png",
             "pathToBodyPicture": null,
             "classOfPicture": "big",
-            "classOfButton": "like"
+            "classOfButton": "like",
+            "numberOfLikes": 20
         },
         {
             "id": 3,
@@ -38,7 +40,8 @@ export default createStore({
             "pathToFacePicture": "../assets/face.png",
             "pathToBodyPicture": "../assets/image2.jpg",
             "classOfPicture": "big",
-            "classOfButton": "like"
+            "classOfButton": "like",
+            "numberOfLikes": 45
         },
         {
             "id": 4,
@@ -49,7 +52,8 @@ export default createStore({
             "pathToFacePicture": "../assets/face.png",
             "pathToBodyPicture": null,
             "classOfPicture": "big",
-            "classOfButton": "like"
+            "classOfButton": "like",
+            "numberOfLikes": 13
         },
         {
             "id": 5,
@@ -60,7 +64,8 @@ export default createStore({
             "pathToFacePicture": "../assets/face.png",
             "pathToBodyPicture": null,
             "classOfPicture": "big",
-            "classOfButton": "like"
+            "classOfButton": "like",
+            "numberOfLikes": 12
         },
         {
             "id": 6,
@@ -71,7 +76,8 @@ export default createStore({
             "pathToFacePicture": "../assets/face.png",
             "pathToBodyPicture": null,
             "classOfPicture": "big",
-            "classOfButton": "like"
+            "classOfButton": "like",
+            "numberOfLikes": 3
         },
         {
             "id": 7,
@@ -82,7 +88,8 @@ export default createStore({
             "pathToFacePicture": "../assets/face.png",
             "pathToBodyPicture": null,
             "classOfPicture": "big",
-            "classOfButton": "like"
+            "classOfButton": "like",
+            "numberOfLikes": 74
         },
         {
             "id": 8,
@@ -93,7 +100,8 @@ export default createStore({
             "pathToFacePicture": "../assets/face.png",
             "pathToBodyPicture": null,
             "classOfPicture": "big",
-            "classOfButton": "like"
+            "classOfButton": "like",
+            "numberOfLikes": 56
         },
         {
             "id": 9,
@@ -104,7 +112,8 @@ export default createStore({
             "pathToFacePicture": "../assets/face.png",
             "pathToBodyPicture": null,
             "classOfPicture": "big",
-            "classOfButton": "like"
+            "classOfButton": "like",
+            "numberOfLikes": 2
         },
         {
             "id": 10,
@@ -115,11 +124,23 @@ export default createStore({
             "pathToFacePicture": "../assets/face.png",
             "pathToBodyPicture": null,
             "classOfPicture": "big",
-            "classOfButton": "like"
+            "classOfButton": "like",
+            "numberOfLikes": 8
         }
     ]
   },
-  mutations: {},
+  mutations: {
+    PlusLike: state => {
+      state.postsList.forEach(post => {
+        post.numberOfLikes += 1;
+      })
+    },
+    ResetLikes: state => {
+      state.postsList.forEach(post => {
+        post.numberOfLikes = 1;
+      })
+    }
+  },
   actions: {},
   modules: {},
 });
