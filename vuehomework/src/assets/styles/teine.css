@@ -1,0 +1,37 @@
+.login {
+    font-family: Georgia;
+	font-size: 19px;
+	top: 170px;
+	background-color: cornflowerblue;
+}
+
+section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: auto;
+	padding: 50px 20px 20px;
+	width: 20%;
+	background-repeat: no-repeat;
+	background-color: white;
+	background-position: left-top;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+div + p { /* Adjacent sibling selector*/
+	text-decoration: underline;
+	color: blue;
+}
+
+div ~ input { /*General sibling selector*/
+	margin: 3px;
+}
+
+.link:visited { /*Pseudo-class*/
+	color: blue;
+}
