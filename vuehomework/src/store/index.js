@@ -137,7 +137,7 @@ export default createStore({
     },
     ResetLikes: state => {
       state.postsList.forEach(post => {
-        post.numberOfLikes = 1;
+        post.numberOfLikes = 0;
       })
     }
   },

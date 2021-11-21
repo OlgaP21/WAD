@@ -24,7 +24,7 @@ export default {
     components: {postsCompo},
     methods: {
         ResetLikes: function() {
-            this.$store.components("ResetLikes")
+            this.$store.commit("ResetLikes")
         }
     }
 }

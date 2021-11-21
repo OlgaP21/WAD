@@ -5,7 +5,7 @@
             <p class="grey"><img src="../assets/face.png" alt="face">{{post.creationTime}}</p>
 			<img src="../assets/image1.jpg" alt="portal" class="big">
 			<p>{{post.bodyOfPost}}</p>
-            <button v-on:click="PlusLike">{{post.numberOfLikes}}</button>
+            <button v-on:click="PlusLike">Likes: {{post.numberOfLikes}}</button>
 		</div>
 	</section>
     </body>

@@ -11,3 +11,6 @@ export default {
     components: {contactCompo},
 }
 </script>
+
+<style scoped src="@/assets/styles/kolmas.css">
+</style>
