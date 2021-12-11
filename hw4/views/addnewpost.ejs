@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <title>Add a new post</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "addPost.css">
+    <link rel = "stylesheet" href = "common.css">
+</head>
+<body>
+    <%- include('./partials/header.ejs') %>
+    <%- include('./partials/navlinks.ejs') %>
+
+    <div id = "h1">Add a new post</div>
+    <div class="create-post">
+        <form action="/posts" method="POST">
+            <label for="urllink">Post author:</label>
+            <input type="text" id="urllink" class = "addLabel" name="urllink" required></textarea><br><br>
+            <label for="title">Post title:</label>
+            <input type="text" id="title" class = "addLabel" name="title" required><br><br>
+            <label for="body">Post body:</label>
+            <input type="text" id="body" class = "addLabel" name="body" required><br><br>
+            <button class = "submit">Add post</button>
+        </form>
+    </div>
+
+    <script>
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+        // Close the dropdown menu if the user clicks outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+
+    <%- include('./partials/footer.ejs') %>
+</body>
+</html>

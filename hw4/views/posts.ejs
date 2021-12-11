@@ -1,0 +1,68 @@
+<html lang="en">
+<head>
+    <title>Posts</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="algne.css">
+    <link rel = "stylesheet" href = "/common.css">
+</head>
+<body>
+    <%- include('./partials/header.ejs') %>
+    <%- include('./partials/navlinks.ejs') %>
+
+    <section>
+        <% if (posts.length > 0) { %>
+            <% posts.forEach(post => { %>
+                <div>
+                    <a href = "/singlepost/<%= post.id %>" class = "singlepost">
+                        <p class = "grey"><img src = "face.png" alt = "profile image">
+                            <%= post.creationtime %>
+                        </p>
+                        <p id = "title">
+                            <%= post.titleofpost %>
+                        </p>
+                        <% if (post.pathtobodypicture != null) { %>
+                            <img src = '<%= post.pathtobodypicture %>' alt = "post image" class = "big">
+                        <% } else { %>
+                            <img src = 'default.jpg' alt = "post image" class = "big">
+                        <% } %>
+                        <p>
+                            <%= post.bodyofpost %>
+                        </p>
+                    </a>
+                    <button class = "like" id = '<%= post.id %>' onclick = "increaseLike(this)"><%= post.numberoflikes %></button>
+                </div>
+            <% }) %>
+        <% } else { %>
+            <p id = "nothing">You did not post anything...</p>
+        <% } %>
+    </section>
+
+    <script>
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+        // Close the dropdown menu if the user clicks outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+
+        function increaseLike(button) {
+            document.getElementById(button.id).innerHTML = parseInt(document.getElementById(button.id).innerHTML) + 1;
+            document.getElementById(button.id).disabled = true;
+        }
+    </script>
+
+    <%- include('./partials/footer.ejs') %>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <title>Log in</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "/login.css">
+    <link rel = "stylesheet" href = "/common.css">
+</head>
+<body>
+    <%- include('./partials/navlinks.ejs') %>
+
+    <section>
+        <div>Welcome to postIt!</div>
+        <p>Create an account</p>
+		<p>Or</p>
+        <form action="/posts" method="POST" class="valgekast">
+            <div>Please Log In</div>
+            <input type="text" placeholder="Email" name="Email" id="">
+            <input type="text" placeholder="Password" name="password" id="">
+        </form>
+        <div>
+            <a href="/posts"><button id="login">Log In</button></a>
+        </div> 
+        <div>
+            <a href="logo.png" class="link">Forgot Password</a>
+        </div>
+    </section>
+
+    <%- include('./partials/footer.ejs') %>
+</body>
+</html>

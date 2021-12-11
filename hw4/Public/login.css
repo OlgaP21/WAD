@@ -1,0 +1,54 @@
+body {
+    position: relative;
+    background-image: linear-gradient(90deg, cornflowerblue 30%,cornflowerblue 0%, white 0%,white 70%, cornflowerblue 0%,cornflowerblue 30%);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+section {
+	position: relative;
+    top: 170px;
+    text-align: center;
+	margin: auto;
+    padding: 20px;
+	width: 20%;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#login { /*id selector*/
+	cursor: pointer;
+	color: white;
+	background-color: blue;
+}
+
+#login:active { /*id selector, pseudo-class*/
+	color: blue;
+	background-color: white;
+}
+
+div + p { /* Adjacent sibling selector*/
+	text-decoration: underline;
+	color: blue;
+}
+
+div ~ input { /*General sibling selector*/
+	margin: 3px;
+}
+
+.link:visited { /*Pseudo-class*/
+	color: blue;
+}
+
+footer {
+    margin-top: -50px;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    z-index: 1;
+    text-align: center;
+}

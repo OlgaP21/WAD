@@ -1,0 +1,32 @@
+* {
+    font-family: Georgia;
+    font-size: 25px;
+    color: black;
+}
+
+body {
+    background-image: linear-gradient(90deg, cornflowerblue 30%,cornflowerblue 0%, white 0%,white 70%, cornflowerblue 0%,cornflowerblue 30%);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: cornflowerblue;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+img {
+    height: auto;
+    width: 40%;
+}
